@@ -14,7 +14,7 @@ public class Bicycle implements Vehicle {
     }
     @Override
     public void start(){
-        System.out.println("Поездка а велосипеде " + company + " началась. У велосипеда " + pedals + " педали.");
+        System.out.println("Поездка на велосипеде " + company + " началась. У велосипеда " + pedals + " педали.");
     }
 
     @Override
