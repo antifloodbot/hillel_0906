@@ -3,14 +3,14 @@ package ua.hillel.homework.hw18;
 public class LegalEntities extends Client{
     @Override
     public void deposit(double amount){
-        balance += amount;
-        System.out.println(balance + "$ deposited to the balance.");
+        userBalance += amount;
+        System.out.println(userBalance + "$ deposited to the balance.");
     }
     @Override
     public void withdraw(double amount){
         double commission = amount * 0.01;
-        balance -= (amount + commission);
-        System.out.println(balance + "$ withdrawn from the balance.");
+        userBalance -= (amount + commission);
+        System.out.println(userBalance + "$ withdrawn from the balance.");
     }
 
     @Override

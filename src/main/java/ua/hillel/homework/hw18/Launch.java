@@ -11,7 +11,7 @@ public class Launch {
         Client clientIndividual = new Individuals();
         clientIndividual.withdraw(10);
         clientIndividual.showUserBalance();
-        clientIndividual.withdraw(0);
-        clientIndividual.deposit(0);
+        clientIndividual.withdraw(-20);
+        clientIndividual.deposit(-20);
     }
 }
