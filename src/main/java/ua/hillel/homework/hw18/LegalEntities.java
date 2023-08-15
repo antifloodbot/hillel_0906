@@ -10,7 +10,7 @@ public class LegalEntities extends Client{
     public void withdraw(double amount){
         double commission = amount * 0.01;
         userBalance -= (amount + commission);
-        System.out.println(userBalance + "$ withdrawn from the balance.");
+        System.out.println(amount + commission + "$ withdrawn from the balance. Your commission is " + commission + "$.");
     }
 
     @Override
@@ -18,5 +18,5 @@ public class LegalEntities extends Client{
         showUserBalance();
         System.out.println("Deposit is processed without a commission.");
         System.out.println("Withdraw is processed with 1% commission.");
-    };
+    }
 }

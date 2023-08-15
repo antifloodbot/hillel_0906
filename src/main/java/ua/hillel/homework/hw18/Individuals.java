@@ -8,7 +8,7 @@ public class Individuals extends Client{
             System.out.println("Cannot deposit " + amount + "$.");
         } else {
             userBalance += amount;
-            System.out.println(userBalance + "$ deposited to the balance.");
+            System.out.println(amount + "$ deposited to the balance.");
         }
     }
 
@@ -18,7 +18,7 @@ public class Individuals extends Client{
             System.out.println("Cannot withdraw " + amount + "$.");
         } else if (userBalance >= amount){
             userBalance -= amount;
-            System.out.println(userBalance + "$ withdrawn from the balance.");
+            System.out.println(amount + "$ withdrawn from the balance.");
         } else {
             System.out.println("Insufficient balance.");
         }
