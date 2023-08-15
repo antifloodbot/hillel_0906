@@ -4,7 +4,7 @@ public abstract class Client {
 
     protected double userBalance = 0.0;
 
-    public double getBalance(){
+    public double getBalance() {
         return userBalance;
     }
 
@@ -12,8 +12,9 @@ public abstract class Client {
 
     public abstract void withdraw(double amount);
 
-    public void showUserBalance(){
-        System.out.println("Current user balance is: " + userBalance +"$.");
+    public void showUserBalance() {
+        System.out.println("Current user balance is " + userBalance + "$.");
     }
+
     public abstract void showDetailAccountInfo();
 }
