@@ -15,18 +15,6 @@ public class IndividualEntrepreneurs extends Client {
     }
 
     @Override
-    public void withdraw(double amount) {
-        if (amount <= 0) {
-            System.out.println("Cannot withdraw " + amount + "$.");
-        } else if (amount > userBalance) {
-            System.out.println("Cannot withdraw " + amount + "$. Insufficient balance.");
-        } else {
-            userBalance -= amount;
-            System.out.println(amount + "$ withdrawn from the balance.");
-        }
-    }
-
-    @Override
     public void showDetailAccountInfo() {
         System.out.println("Deposit is processed with 1% commission if deposit amount is less than 1000.0$. If deposit amount is 1000.0$ or bigger commission is 0.5%");
         System.out.println("Withdraw is processed without a commission.");

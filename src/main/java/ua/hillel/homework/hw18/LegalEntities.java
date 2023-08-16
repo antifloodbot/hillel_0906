@@ -3,16 +3,6 @@ package ua.hillel.homework.hw18;
 public class LegalEntities extends Client {
 
     @Override
-    public void deposit(double amount) {
-        if (amount <= 0) {
-            System.out.println("Cannot deposit " + amount + "$.");
-        } else {
-            userBalance += amount;
-            System.out.println(amount + "$ deposited to the balance.");
-        }
-    }
-
-    @Override
     public void withdraw(double amount) {
         double commission = amount * 0.01;
         if (amount + commission > userBalance) {
