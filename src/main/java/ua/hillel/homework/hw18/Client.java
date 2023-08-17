@@ -4,11 +4,7 @@ public abstract class Client {
 
     protected double userBalance = 0.0;
 
-    public double getBalance() {
-        return userBalance;
-    }
-
-    public void deposit(double amount){
+    public void deposit(double amount) {
         if (amount <= 0) {
             System.out.println("Cannot deposit " + amount + "$.");
         } else {
@@ -17,7 +13,7 @@ public abstract class Client {
         }
     }
 
-    public void withdraw(double amount){
+    public void withdraw(double amount) {
         if (amount <= 0) {
             System.out.println("Cannot withdraw " + amount + "$.");
         } else if (amount > userBalance) {
