@@ -13,7 +13,8 @@ public class IndividualEntrepreneurs extends Client {
             System.out.println("Cannot deposit " + amount + "$.");
         } else {
             double commission = amount * commissionRate;
-            userBalance += (amount - commission);
+            double newBalance = getUserBalance() + (amount - commission);
+            setUserBalance(newBalance);
             System.out.println(amount - commission + "$ deposited to the balance. Your commission is " + commission + "$.");
         }
     }
@@ -22,11 +23,11 @@ public class IndividualEntrepreneurs extends Client {
     public void withdraw(double amount) {
         if (amount <= 0) {
             System.out.println("Cannot withdraw " + amount + "$.");
-        } else if (amount > userBalance) {
+        } else if (amount > getUserBalance()) {
             System.out.println("Cannot withdraw " + amount + "$. Insufficient balance.");
         } else {
-            userBalance -= amount;
-            System.out.println(amount + "$ withdrawn from the balance.");
+            double newBalance = getUserBalance() - amount;
+            setUserBalance(newBalance);            System.out.println(amount + "$ withdrawn from the balance.");
         }
     }
 

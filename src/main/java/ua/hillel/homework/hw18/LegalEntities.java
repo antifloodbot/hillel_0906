@@ -11,7 +11,8 @@ public class LegalEntities extends Client {
         if (amount <= 0) {
             System.out.println("Cannot deposit " + amount + "$.");
         } else {
-            userBalance += amount;
+            double newBalance = getUserBalance() + amount;
+            setUserBalance(newBalance);
             System.out.println(amount + "$ deposited to the balance.");
         }
     }
@@ -19,12 +20,13 @@ public class LegalEntities extends Client {
     @Override
     public void withdraw(double amount) {
         double commission = amount * 0.01;
-        if (amount + commission > userBalance) {
+        if (amount + commission > getUserBalance()) {
             System.out.println("Cannot withdraw " + amount + "$. Insufficient balance.");
         } else if (amount <= 0) {
             System.out.println("Cannot withdraw " + amount + "$.");
         } else {
-            userBalance -= (amount + commission);
+            double newBalance = getUserBalance() - (amount + commission);
+            setUserBalance(newBalance);
             System.out.println(amount + "$ withdrawn from the balance. Your commission is " + commission + "$.");
         }
     }

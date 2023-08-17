@@ -11,7 +11,8 @@ public class Individuals extends Client {
         if (amount <= 0) {
             System.out.println("Cannot deposit " + amount + "$.");
         } else {
-            userBalance += amount;
+            double newBalance = getUserBalance() + amount;
+            setUserBalance(newBalance);
             System.out.println(amount + "$ deposited to the balance.");
         }
     }
@@ -20,10 +21,11 @@ public class Individuals extends Client {
     public void withdraw(double amount) {
         if (amount <= 0) {
             System.out.println("Cannot withdraw " + amount + "$.");
-        } else if (amount > userBalance) {
+        } else if (amount > getUserBalance()) {
             System.out.println("Cannot withdraw " + amount + "$. Insufficient balance.");
         } else {
-            userBalance -= amount;
+            double newBalance = getUserBalance() - amount;
+            setUserBalance(newBalance);
             System.out.println(amount + "$ withdrawn from the balance.");
         }
     }
