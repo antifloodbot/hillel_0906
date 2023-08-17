@@ -2,6 +2,10 @@ package ua.hillel.homework.hw18;
 
 public class IndividualEntrepreneurs extends Client {
 
+    public IndividualEntrepreneurs(double userBalance) {
+        super(userBalance);
+    }
+
     @Override
     public void deposit(double amount) {
         double commissionRate = amount < 1000 ? 0.01 : 0.005;
@@ -11,6 +15,18 @@ public class IndividualEntrepreneurs extends Client {
             double commission = amount * commissionRate;
             userBalance += (amount - commission);
             System.out.println(amount - commission + "$ deposited to the balance. Your commission is " + commission + "$.");
+        }
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        if (amount <= 0) {
+            System.out.println("Cannot withdraw " + amount + "$.");
+        } else if (amount > userBalance) {
+            System.out.println("Cannot withdraw " + amount + "$. Insufficient balance.");
+        } else {
+            userBalance -= amount;
+            System.out.println(amount + "$ withdrawn from the balance.");
         }
     }
 
