@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="lesson19suite" parallel = "methods">
+    
+    <listeners>
+        <listener class-name="lesson19.listener.MyListener"></listener>
+    </listeners>
+
+    <parameter name="username" value="alexei@gmail.com"></parameter>
+    <parameter name="password" value="12345"></parameter>
+
+    <test name="launchOfFirstClass">
+        <classes>
+            <class name="lesson19.testsuits.FirstClass"></class>
+        </classes>
+    </test>
+
+    <test name="launchOfSecondClass">
+        <classes>
+            <class name="lesson19.testsuits.SecondClass"></class>
+        </classes>
+    </test>
+
+</suite>
