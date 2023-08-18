@@ -20,7 +20,7 @@ public abstract class Client {
     public abstract void withdraw(double amount);
 
     public void showUserBalance() {
-        System.out.println("Current user balance is " + userBalance + "$.");
+        System.out.println("Current user balance is " + getUserBalance() + "$.");
     }
 
     public abstract void showDetailAccountInfo();

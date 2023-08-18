@@ -27,7 +27,8 @@ public class IndividualEntrepreneurs extends Client {
             System.out.println("Cannot withdraw " + amount + "$. Insufficient balance.");
         } else {
             double newBalance = getUserBalance() - amount;
-            setUserBalance(newBalance);            System.out.println(amount + "$ withdrawn from the balance.");
+            setUserBalance(newBalance);
+            System.out.println(amount + "$ withdrawn from the balance.");
         }
     }
 
