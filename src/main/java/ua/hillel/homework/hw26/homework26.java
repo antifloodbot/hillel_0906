@@ -50,6 +50,7 @@ public class homework26 {
         WebElement basketXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//rz-cart[@class='header-actions__component']")));
         basketXPath.click();
         WebElement closeBasketPopupXpath = webDriverWait.until((ExpectedConditions.elementToBeClickable(By.xpath("//button[@aria-label='Закрыть модальное окно']"))));
+        closeBasketPopupXpath.click();
 
     }
 
