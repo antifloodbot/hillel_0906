@@ -27,19 +27,15 @@ public class homework26 {
     @Test
     public void testLocators() {
         driver.get("https://rozetka.com.ua/");
-        WebElement logoCss = webDriverWait.until(ExpectedConditions.elementToBeClickable
-                (By.cssSelector("img[alt='Rozetka Logo']")));
+        WebElement logoCss = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("img[alt='Rozetka Logo']")));
         logoCss.click();
-        WebElement logoXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable
-                (By.xpath("//img[@alt='Rozetka Logo']")));
+        WebElement logoXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Rozetka Logo']")));
         logoXPath.click();
-        WebElement authButtonCss = webDriverWait.until(ExpectedConditions.elementToBeClickable
-                (By.cssSelector("rz-user[class='header-actions__component'] button[type='button']")));
+        WebElement authButtonCss = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("rz-user[class='header-actions__component'] button[type='button']")));
         authButtonCss.click();
         WebElement closeAuthPopupCss = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[aria-label='Закрыть модальное окно']")));
         closeAuthPopupCss.click();
-        WebElement authButtonXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable
-                (By.xpath("//rz-user[@class='header-actions__component']//button[@type='button']")));
+        WebElement authButtonXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//rz-user[@class='header-actions__component']//button[@type='button']")));
         authButtonXPath.click();
         WebElement closeAuthPopupXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@aria-label='Закрыть модальное окно']")));
         closeAuthPopupXPath.click();
