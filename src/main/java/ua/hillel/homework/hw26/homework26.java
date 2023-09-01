@@ -31,21 +31,21 @@ public class homework26 {
         logoCss.click();
         WebElement logoXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='Rozetka Logo']")));
         logoXPath.click();
-        WebElement authButtonCss = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("rz-user[class='header-actions__component'] button[type='button']")));
+        WebElement authButtonCss = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("rz-user[class='header-actions__component']")));
         authButtonCss.click();
         WebElement closeAuthPopupCss = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[aria-label='Закрыть модальное окно']")));
         closeAuthPopupCss.click();
-        WebElement authButtonXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//rz-user[@class='header-actions__component']//button[@type='button']")));
+        WebElement authButtonXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//rz-user[@class='header-actions__component']")));
         authButtonXPath.click();
-        WebElement closeAuthPopupXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@aria-label='Закрыть модальное окно']")));
+        WebElement closeAuthPopupXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='modal__close']")));
         closeAuthPopupXPath.click();
-        WebElement basketCss = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("rz-cart[class='header-actions__component'] button[type='button']")));
+        WebElement basketCss = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("rz-cart[class='header-actions__component']")));
         basketCss.click();
         WebElement closeBasketPopupCss = webDriverWait.until((ExpectedConditions.elementToBeClickable(By.cssSelector("button[aria-label='Закрыть модальное окно']"))));
         closeBasketPopupCss.click();
-        WebElement basketXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//rz-cart[@class='header-actions__component']")));
+        WebElement basketXPath = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[@type='button'])[6]")));
         basketXPath.click();
-        WebElement closeBasketPopupXpath = webDriverWait.until((ExpectedConditions.elementToBeClickable(By.xpath("//button[@aria-label='Закрыть модальное окно']"))));
+        WebElement closeBasketPopupXpath = webDriverWait.until((ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='modal__close']"))));
         closeBasketPopupXpath.click();
     }
 
