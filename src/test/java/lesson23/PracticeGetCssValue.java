@@ -28,7 +28,7 @@ public class PracticeGetCssValue {
     }
 
     @Test
-    public void assertTest() throws InterruptedException {
+    public void assertTest() {
         driver.get("https://rozetka.com.ua/");
         WebElement inputSearch = driver.findElement(By.name("search"));
         inputSearch.sendKeys("Mac");
