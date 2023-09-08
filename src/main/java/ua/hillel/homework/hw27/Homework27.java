@@ -14,6 +14,7 @@ public class Homework27 extends InitialDriver {
     public void testTopPurchases() {
 
         driver.get("https://rozetka.com.ua/");
+        //driver.navigate().refresh();
 
         WebElement laptopAndComputers = driver
                 .findElement(By.xpath("//ul[@class='menu-categories menu-categories_type_main']/li[1]"));

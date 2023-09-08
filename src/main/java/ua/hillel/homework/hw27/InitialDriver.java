@@ -18,13 +18,13 @@ public class InitialDriver {
     public void setupWebDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(15000));
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
         webDriverWait = new WebDriverWait(driver, Duration.ofMillis(5000));
         driver.manage().window().maximize();
 
     }
     @AfterTest
     public void close() {
-        driver.close();
+        driver.quit();
     }
 }
