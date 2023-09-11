@@ -28,12 +28,12 @@ public class Homework28 extends InitialDriver {
         webDriverWait.until(ExpectedConditions.visibilityOf(cartAddedIndication));
 
         WebElement productTitle = driver.findElement(By.xpath("//span[contains(text(),'Ноутбук Acer Aspire 5 A515-56G-51Q5 (NX.AT2EU.00M)')]"));
-        String productTitleText = productTitle.getAttribute("inner text");
+        String productTitleText = productTitle.getAttribute("innerText");
 
         cartAddedIndication.click();
 
         WebElement inCartProductTitle = driver.findElement(By.cssSelector("a[data-testid='title']"));
-        String productInCartText = inCartProductTitle.getAttribute("inner text");
+        String productInCartText = inCartProductTitle.getAttribute("innerText");
 
         Assert.assertEquals(productInCartText, productTitleText, "Wrong product");
 
