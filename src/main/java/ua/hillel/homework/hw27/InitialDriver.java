@@ -21,10 +21,10 @@ public class InitialDriver {
 
     @BeforeTest
     public void setupWebDriver() {
-        WebDriverManager.edgedriver().setup();
-        EdgeOptions options = new EdgeOptions();
-        options.addArguments("incognito");
-        driver = new EdgeDriver(options);
+        WebDriverManager.chromedriver().setup();
+        /*ChromeOptions options = new ChromeOptions();
+        options.addArguments("incognito");*/
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(50000));
         webDriverWait = new WebDriverWait(driver, Duration.ofMillis(50000));
         driver.manage().window().maximize();
