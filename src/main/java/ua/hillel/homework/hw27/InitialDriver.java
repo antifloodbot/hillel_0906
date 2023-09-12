@@ -3,7 +3,12 @@ package ua.hillel.homework.hw27;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -16,10 +21,12 @@ public class InitialDriver {
 
     @BeforeTest
     public void setupWebDriver() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
-        webDriverWait = new WebDriverWait(driver, Duration.ofMillis(5000));
+        WebDriverManager.edgedriver().setup();
+        EdgeOptions options = new EdgeOptions();
+        options.addArguments("incognito");
+        driver = new EdgeDriver(options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(50000));
+        webDriverWait = new WebDriverWait(driver, Duration.ofMillis(50000));
         driver.manage().window().maximize();
 
     }
