@@ -7,11 +7,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import ua.hillel.homework.hw27.InitialDriver;
 
+import static java.lang.Thread.sleep;
+
 public class Homework28 extends InitialDriver {
 
     @Test
-    public void addProductToTheCart() {
-        driver.get("https://rozetka.com.ua/");
+    public void addProductToTheCart() throws InterruptedException {
+        driver.get("https://rozetka.com.ua");
 
         WebElement laptopAndComputers = driver
                 .findElement(By.xpath("//ul[@class='menu-categories menu-categories_type_main']/li[1]"));
@@ -22,12 +24,13 @@ public class Homework28 extends InitialDriver {
         laptops.click();
 
         WebElement cartButton = driver.findElement(By.xpath("(//button[@aria-label='Купить'])[1]"));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(cartButton));
         cartButton.click();
 
         WebElement cartAddedIndication = driver.findElement(By.xpath("(//button[@aria-label='В корзине'])[1]"));
         webDriverWait.until(ExpectedConditions.visibilityOf(cartAddedIndication));
 
-        WebElement productTitle = driver.findElement(By.xpath("//span[contains(text(),'Ноутбук Acer Aspire 5 A515-56G-51Q5 (NX.AT2EU.00M)')]"));
+        WebElement productTitle = driver.findElement(By.cssSelector("h1[class='product__title-left product__title-collapsed ng-star-inserted']"));
         String productTitleText = productTitle.getAttribute("innerText");
 
         cartAddedIndication.click();
