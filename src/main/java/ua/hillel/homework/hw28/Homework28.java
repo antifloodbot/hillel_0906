@@ -12,8 +12,8 @@ import static java.lang.Thread.sleep;
 public class Homework28 extends InitialDriver {
 
     @Test
-    public void addProductToTheCart() throws InterruptedException {
-        driver.get("https://rozetka.com.ua");
+    public void addProductToTheCart() {
+        driver.get("https://rozetka.com.ua/");
 
         WebElement laptopAndComputers = driver
                 .findElement(By.xpath("//ul[@class='menu-categories menu-categories_type_main']/li[1]"));

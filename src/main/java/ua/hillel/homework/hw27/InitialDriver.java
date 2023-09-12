@@ -22,12 +22,10 @@ public class InitialDriver {
     @BeforeTest
     public void setupWebDriver() {
         WebDriverManager.chromedriver().setup();
-        /*ChromeOptions options = new ChromeOptions();
-        options.addArguments("incognito");*/
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(50000));
         webDriverWait = new WebDriverWait(driver, Duration.ofMillis(50000));
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
 
     }
     @AfterTest
