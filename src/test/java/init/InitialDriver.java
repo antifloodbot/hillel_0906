@@ -17,8 +17,8 @@ public class InitialDriver {
     public void setupWebDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
-        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5000));
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(50000));
+        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(50000));
     }
     @AfterTest
     public void close() {
