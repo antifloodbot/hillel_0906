@@ -24,7 +24,7 @@ public class PageObjectExample extends InitialDriver {
                 .clickOnFirstProduct()
                 .getTittleOfProduct();
 
-        Assert.assertEquals(tittleFirstProductFromSearchPage, tittleOfProductOnProductPage);
+        Assert.assertEquals(tittleFirstProductFromSearchPage, tittleOfProductOnProductPage, "Titles are not the same");
 
     }
 }

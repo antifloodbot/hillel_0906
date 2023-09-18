@@ -21,8 +21,8 @@ public class InitialDriver {
         options.addArguments("--disable-web-security");
         options.addArguments("--incognito");
         driver = new ChromeDriver(options);
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(10000));
-        webDriverWait = new WebDriverWait(driver, Duration.ofMillis(10000));
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(15000));
+        webDriverWait = new WebDriverWait(driver, Duration.ofMillis(15000));
         driver.manage().window().maximize();
 
     }

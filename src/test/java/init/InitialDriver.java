@@ -10,8 +10,8 @@ import org.testng.annotations.BeforeTest;
 import java.time.Duration;
 
 public class InitialDriver {
-    protected WebDriver driver;
-    protected WebDriverWait webDriverWait;
+    public WebDriver driver;
+    public WebDriverWait webDriverWait;
 
     @BeforeTest
     public void setupWebDriver() {
