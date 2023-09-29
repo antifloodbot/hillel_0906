@@ -9,7 +9,6 @@ public class MainPageLogic extends MainPageLocators {
     private WebDriver driver;
     private WebDriverWait webDriverWait;
 
-
     public MainPageLogic(WebDriver driver, WebDriverWait webDriverWait) {
         this.driver = driver;
         this.webDriverWait = webDriverWait;

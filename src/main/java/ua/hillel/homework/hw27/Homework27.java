@@ -19,6 +19,7 @@ public class Homework27 extends InitialDriver {
         WebElement laptopAndComputers = driver
                 .findElement(By.xpath("//ul[@class='menu-categories menu-categories_type_main']/li[1]"));
         laptopAndComputers.click();
+
         WebElement laptops = driver.findElement(By.xpath("//a[@title='Ноутбуки'][1]"));
         laptops.click();
 
