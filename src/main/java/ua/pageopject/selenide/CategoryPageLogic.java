@@ -2,6 +2,8 @@ package ua.pageopject.selenide;
 
 import com.codeborne.selenide.SelenideElement;
 
+import java.util.Objects;
+
 import static com.codeborne.selenide.Selenide.page;
 
 public class CategoryPageLogic extends CategoryPageLocators{
@@ -10,13 +12,13 @@ public class CategoryPageLogic extends CategoryPageLocators{
 
         SelenideElement element = null;
         for (SelenideElement e : subCategories) {
-            if(e.text().equals(categoryName)) {
+            if(e.text().trim().equals(categoryName)) {
                 System.out.println(e.text());
                 element = e;
                 break;
             }
         }
-        element.click();
+        Objects.requireNonNull(element).click();
         return page(SearchPageLogic.class);
     }
 }
