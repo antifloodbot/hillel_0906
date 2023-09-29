@@ -21,5 +21,5 @@ public class SearchPageLogic extends SearchPageLocators {
             return new ProductPageLogic(driver);
         }
 
-    }/**/
+    }
 
