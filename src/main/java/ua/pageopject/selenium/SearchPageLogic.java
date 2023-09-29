@@ -1,10 +1,8 @@
-package ua.pageopject;
+package ua.pageopject.selenium;
 
 import org.openqa.selenium.WebDriver;
 
-    import org.openqa.selenium.WebDriver;
-
-    public class SearchPageLogic extends SearchPageLocators {
+public class SearchPageLogic extends SearchPageLocators {
 
 
         private WebDriver driver;

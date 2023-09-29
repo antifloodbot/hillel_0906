@@ -8,8 +8,8 @@ package lesson27;
 import init.InitialDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ua.pageopject.MainPageLogic;
-import ua.pageopject.SearchPageLogic;
+import ua.pageopject.selenium.MainPageLogic;
+import ua.pageopject.selenium.SearchPageLogic;
 
 public class PageObjectExample extends InitialDriver {
 

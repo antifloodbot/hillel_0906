@@ -1,4 +1,4 @@
-package ua.pageopject;
+package ua.pageopject.selenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
