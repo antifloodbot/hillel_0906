@@ -1,14 +1,17 @@
 package ua.hillel.homework.hw34;
 
 public class SortStreamApi {
+
     public static void main(String[] args) {
+        SortStreamApi sorter = new SortStreamApi();
         String eng = "ealgbkjdfvbjkhfdkbljvd";
-        sortAndPrint(eng);
+        sorter.sortAndPrint(eng);
     }
 
-    public static void sortAndPrint(String str) {
+    public void sortAndPrint(String str) {
         str.chars()
+                .mapToObj(c -> (char) c)
                 .sorted()
-                .forEach(ch -> System.out.print((char) ch));
+                .forEach(System.out::print);
     }
 }
