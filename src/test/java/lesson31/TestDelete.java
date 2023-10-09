@@ -12,7 +12,7 @@ public class TestDelete {
 
     @Test
     public void testDelete() {
-        configureSpec(requestSpecification(BASE_URL), responseSpecification(200));
+        configureSpec(requestSpecification(BASE_URL), responseSpecification(204));
         given()
                 .when()
                 .delete("api/users/2")
