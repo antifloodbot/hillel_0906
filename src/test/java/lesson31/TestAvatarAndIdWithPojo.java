@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static io.restassured.RestAssured.given;
 import static lesson31.Specification.*;
@@ -23,8 +24,8 @@ public class TestAvatarAndIdWithPojo {
 
         Assert.assertTrue(userDataList.stream().allMatch(x -> x.getEmail().endsWith("reqres.in")));
 
-        List<String> ids = userDataList.stream().map(x -> x.getId().toString()).toList();
-        List<String> avatars = userDataList.stream().map(UserData::getAvatar).toList();
+        List<String> ids = userDataList.stream().map(x -> x.getId().toString()).collect(Collectors.toList());
+        List<String> avatars = userDataList.stream().map(UserData::getAvatar).collect(Collectors.toList());
 
         for (int i = 0; i < ids.size(); i++) {
             Assert.assertTrue(avatars.get(i).contains(ids.get(i)));

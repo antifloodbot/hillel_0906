@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static io.restassured.RestAssured.given;
 import static lesson31.Specification.*;
@@ -21,8 +22,8 @@ public class TestSortedYearsPojo {
                 .get("api/unknown")
                 .then().log().all()
                 .extract().body().jsonPath().getList("data", YearsData.class);
-        List<Integer> yearActual = yearsDataList.stream().map(YearsData::getYear).toList();
-        List<Integer> expectedActual = yearActual.stream().sorted().toList();
+        List<Integer> yearActual = yearsDataList.stream().map(YearsData::getYear).collect(Collectors.toList());
+        List<Integer> expectedActual = yearActual.stream().sorted().collect(Collectors.toList());
         Assert.assertEquals(expectedActual, yearActual);
     }
 }
