@@ -12,6 +12,12 @@ public class TestForLogger {
 
     @Test
     public void logger(){
-        logger.info("Trace logging level");
+        System.out.println("hello");
+        logger.trace("Trace logging level 600");
+        logger.debug("Trace logging level 500");
+        logger.info("Trace logging level 400");
+        logger.warn("Trace logging level 300");
+        logger.error("Trace logging level 200");
+        logger.fatal("Trace logging level 100");
     }
 }
