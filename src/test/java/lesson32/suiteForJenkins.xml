@@ -9,6 +9,7 @@
     <test name="success">
         <classes>
             <class name="lesson32.FirstClass"/>
+            <class name="lesson32.ThirdClassWithSteps"/>
         </classes>
     </test>
 
