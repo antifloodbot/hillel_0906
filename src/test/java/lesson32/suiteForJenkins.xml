@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suiteForJenkins" verbose="10" parallel="tests" thread-count="4">
+
+    <listeners>
+        <listener class-name="lesson19.listener.MyListener"/>
+    </listeners>
+
+    <test name="success">
+        <classes>
+            <class name="lesson32.FirstClass"/>
+        </classes>
+    </test>
+
+    <test name="fail">
+        <classes>
+            <class name="lesson32.SecondClass"/>
+        </classes>
+    </test>
+
+</suite>
